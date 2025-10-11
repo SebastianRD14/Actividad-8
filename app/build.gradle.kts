@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.srd14.actividad8"
-        minSdk = 24
+        minSdk = 28
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"

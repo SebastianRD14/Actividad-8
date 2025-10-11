@@ -1,8 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/fondo">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/actividad_08"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary1"
+        android:fontFamily="@font/funnelsans_bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Campo para agregar número -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/num_telefono"
+        app:boxStrokeColor="@color/primary2"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:fontFamily="@font/funnelsans" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón para agregar número -->
+    <Button
+        android:id="@+id/btnAddNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar_numero"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Título de la lista -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/numeros_monitoreados"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/funnelsans_bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Lista de números -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPhoneNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/fondo"
+        android:padding="8dp" />
+    <!-- Botón de testing (solo para desarrollo) -->
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simular_sms"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/secondary2"
+        android:textColor="@color/white" />
+
+    <!-- Estado del monitoreo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/secondary1"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monitoreo_activo"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/funnelsans_bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

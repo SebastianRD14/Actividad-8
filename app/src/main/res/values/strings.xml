@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Actividad 8</string>
+    <string name="actividad_08">📱 Actividad 08</string>
+    <string name="num_telefono">Número de teléfono</string>
+    <string name="agregar_numero">➕ Agregar Número</string>
+    <string name="numeros_monitoreados">📋 Números Monitoreados</string>
+    <string name="monitoreo_activo">🟢 Monitoreo Activo</string>
+    <string name="simular_sms">🧪 Simular SMS</string>
+    <string name="telefono">📞</string>
+    <string name="numero_de_telefono">Número de teléfono</string>
+    <string name="basura">🗑️</string>
 </resources>
